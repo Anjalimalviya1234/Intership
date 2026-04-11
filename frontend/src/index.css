@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-slate-50 text-gray-900;
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', system-ui, sans-serif;
+    @apply font-bold;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Premium Buttons */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 text-white px-7 py-3.5 rounded-xl font-semibold text-sm tracking-wide transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0;
+    background: linear-gradient(135deg, #4338ca, #6366f1);
+  }
+  .btn-primary:hover {
+    box-shadow: 0 0 30px rgba(99,102,241,0.35);
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 bg-white border-2 px-7 py-3.5 rounded-xl font-semibold text-sm tracking-wide transition-all duration-300 hover:-translate-y-0.5;
+    color: #4338ca;
+    border-color: #c7d2fe;
+  }
+  .btn-secondary:hover {
+    background-color: #eef2ff;
+    border-color: #818cf8;
+  }
+
+  .btn-accent {
+    @apply inline-flex items-center gap-2 text-white px-7 py-3.5 rounded-xl font-semibold text-sm tracking-wide transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0;
+    background: linear-gradient(135deg, #f59e0b, #f97316);
+  }
+
+  /* Cards */
+  .card {
+    @apply bg-white rounded-2xl overflow-hidden;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+  }
+  .card:hover {
+    box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+    transform: translateY(-4px);
+  }
+
+  /* Section Titles */
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-gray-900 mb-4;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .section-subtitle {
+    @apply text-lg text-gray-500 max-w-2xl mx-auto;
+  }
+
+  /* Badge */
+  .badge {
+    @apply inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider;
+  }
+
+  .badge-primary {
+    @apply inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider;
+    background-color: #e0e7ff;
+    color: #4338ca;
+  }
+
+  .badge-success {
+    @apply inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider bg-emerald-100 text-emerald-700;
+  }
+
+  /* Form Inputs - Premium Style */
+  .form-input {
+    @apply w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 focus:outline-none focus:bg-white transition-all duration-200 text-sm;
+  }
+  .form-input:focus {
+    box-shadow: 0 0 0 3px rgba(129, 140, 248, 0.3);
+    border-color: #818cf8;
+  }
+
+  .form-label {
+    @apply block text-gray-700 font-medium mb-2 text-sm;
+  }
+
+  /* Glass card */
+  .glass {
+    @apply backdrop-blur-md rounded-2xl;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+}
+
+@layer utilities {
+  /* Animate delays */
+  .delay-100 { animation-delay: 100ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-400 { animation-delay: 400ms; }
+  .delay-500 { animation-delay: 500ms; }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.65s ease-out forwards;
+    opacity: 0;
+  }
+
+  .gradient-bg {
+    background: linear-gradient(135deg, #312e81 0%, #4338ca 45%, #6366f1 100%);
+  }
+
+  .gradient-bg-warm {
+    background: linear-gradient(135deg, #1e293b 0%, #312e81 50%, #4338ca 100%);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #6366f1, #06b6d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Subtle grid pattern */
+  .pattern-grid {
+    background-image: 
+      linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  .pattern-dots {
+    background-image: radial-gradient(circle, rgba(255,255,255,0.15) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+}
+
+@keyframes fadeInUp {
+  from { 
+    opacity: 0; 
+    transform: translateY(30px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #c7d2fe;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #818cf8;
+}
+
+/* Smooth page transitions */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
