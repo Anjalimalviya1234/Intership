@@ -32,9 +32,11 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16 md:h-18">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary-700 to-primary-500 rounded-xl flex items-center justify-center shadow-md group-hover:shadow-glow transition-all duration-300">
-              <span className="text-white font-black text-sm tracking-tight">DA</span>
-            </div>
+            <img
+              src="/dac-logo.svg"
+              alt="Devi Ahilya Coaching Classes Logo"
+              className="w-12 h-12 drop-shadow-md group-hover:scale-105 transition-transform duration-300"
+            />
             <div className="hidden sm:block">
               <p className="font-bold text-gray-900 text-base leading-tight" style={{ fontFamily: 'Poppins, sans-serif' }}>
                 Devi Ahilya

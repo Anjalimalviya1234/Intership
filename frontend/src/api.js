@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const API_BASE = '/api';
+
+const API_BASE = 'import.meta.env.VITE_API_BASE';
 
 export const api = {
   submitContact: (data) => axios.post(`${API_BASE}/contact`, data),

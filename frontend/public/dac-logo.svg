@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Outer ring - dark purple -->
+  <circle cx="100" cy="100" r="98" fill="#4B0082" stroke="#4B0082" stroke-width="1"/>
+  
+  <!-- White ring separator -->
+  <circle cx="100" cy="100" r="88" fill="white" stroke="white" stroke-width="1"/>
+
+  <!-- Inner gold circle -->
+  <circle cx="100" cy="100" r="84" fill="#F5C518" stroke="#F5C518" stroke-width="1"/>
+
+  <!-- Inner decorative ring -->
+  <circle cx="100" cy="100" r="72" fill="none" stroke="#8B0000" stroke-width="2.5"/>
+  
+  <!-- White inner background -->
+  <circle cx="100" cy="100" r="70" fill="white"/>
+
+  <!-- DA monogram background shield shape -->
+  <ellipse cx="100" cy="105" rx="38" ry="42" fill="#8B0000"/>
+  
+  <!-- DA letters -->
+  <text x="100" y="118" 
+        font-family="Georgia, serif" 
+        font-size="36" 
+        font-weight="bold" 
+        fill="white" 
+        text-anchor="middle"
+        letter-spacing="-2">DA</text>
+
+  <!-- Small decoration lines -->
+  <line x1="72" y1="150" x2="128" y2="150" stroke="#8B0000" stroke-width="1.5"/>
+  <line x1="78" y1="154" x2="122" y2="154" stroke="#F5C518" stroke-width="1"/>
+
+  <!-- Curved text around top: "Devi Ahilya Coaching Classes" -->
+  <defs>
+    <path id="topArc" d="M 15,100 A 85,85 0 0,1 185,100"/>
+    <path id="bottomArc" d="M 30,115 A 72,72 0 0,0 170,115"/>
+  </defs>
+
+  <!-- Top arc text on the purple outer ring -->
+  <path id="outerTopArc" d="M 12,100 A 88,88 0 0,1 188,100" fill="none"/>
+  <text font-family="Arial, sans-serif" font-size="12.5" font-weight="bold" fill="white" letter-spacing="1.2">
+    <textPath href="#outerTopArc" startOffset="4%">Devi Ahilya Coaching Classes</textPath>
+  </text>
+
+  <!-- Bottom arc text: INDORE -->
+  <path id="outerBottomArc" d="M 22,108 A 88,88 0 0,0 178,108" fill="none"/>
+  <text font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" letter-spacing="3">
+    <textPath href="#outerBottomArc" startOffset="28%">• INDORE •</textPath>
+  </text>
+
+  <!-- Star decorations on outer ring -->
+  <text x="22" y="88" font-size="8" fill="#F5C518" text-anchor="middle">★</text>
+  <text x="178" y="88" font-size="8" fill="#F5C518" text-anchor="middle">★</text>
+</svg>

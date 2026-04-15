@@ -11,9 +11,11 @@ const Footer = () => {
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-5">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary-700 to-primary-500 rounded-xl flex items-center justify-center shadow-glow">
-                <span className="text-white font-black text-sm">DA</span>
-              </div>
+              <img
+                src="/dac-logo.svg"
+                alt="Devi Ahilya Coaching Classes Logo"
+                className="w-12 h-12 drop-shadow-md"
+              />
               <div>
                 <p className="font-bold text-white text-base leading-tight" style={{ fontFamily: 'Poppins, sans-serif' }}>
                   Devi Ahilya
